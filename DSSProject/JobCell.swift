@@ -29,6 +29,7 @@ class JobCell: UICollectionViewCell {
     let factory: UILabel = {
         let lbl = UILabel()
         lbl.text = "CONG TY TNHH MISA co."
+        lbl.textColor = UIColor(displayP3Red: 127/255, green: 131/255, blue: 133/255, alpha: 1)
         lbl.font = UIFont.boldSystemFont(ofSize: 17)
         lbl.translatesAutoresizingMaskIntoConstraints = false
         return lbl
@@ -115,9 +116,9 @@ class JobCell: UICollectionViewCell {
         
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-10-[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": job]))
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-10-[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": factory]))
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-100-[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": address]))
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-100-[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": salary]))
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-100-[v0]-30-[v1]-5-[v2]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": datePost, "v1": labelExpier, "v2": expire]))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-80-[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": address]))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-80-[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": salary]))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-80-[v0]-30-[v1]-5-[v2]-10-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": datePost, "v1": labelExpier, "v2": expire]))
         
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-10-[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": labelAddress]))
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-10-[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": labelSalary]))
