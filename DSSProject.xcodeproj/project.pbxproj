@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05902397206A2EEA00D092FA /* JobDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05902396206A2EEA00D092FA /* JobDetail.swift */; };
+		05902399206A397600D092FA /* GeneralInfor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05902398206A397600D092FA /* GeneralInfor.swift */; };
 		05CB387B20694BA600F36E45 /* MajorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CB387A20694BA600F36E45 /* MajorCell.swift */; };
 		05CB387D206951B700F36E45 /* MajorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CB387C206951B700F36E45 /* MajorController.swift */; };
 		2FF5781220692915005FD3E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF5781120692915005FD3E2 /* AppDelegate.swift */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05902396206A2EEA00D092FA /* JobDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetail.swift; sourceTree = "<group>"; };
+		05902398206A397600D092FA /* GeneralInfor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralInfor.swift; sourceTree = "<group>"; };
 		05CB387A20694BA600F36E45 /* MajorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MajorCell.swift; sourceTree = "<group>"; };
 		05CB387C206951B700F36E45 /* MajorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MajorController.swift; sourceTree = "<group>"; };
 		2FF5780E20692915005FD3E2 /* DSSProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DSSProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,6 +116,8 @@
 				05CB387A20694BA600F36E45 /* MajorCell.swift */,
 				05CB387C206951B700F36E45 /* MajorController.swift */,
 				2FF5784220695BB5005FD3E2 /* JobCell.swift */,
+				05902396206A2EEA00D092FA /* JobDetail.swift */,
+				05902398206A397600D092FA /* GeneralInfor.swift */,
 			);
 			path = DSSProject;
 			sourceTree = "<group>";
@@ -267,6 +273,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05902397206A2EEA00D092FA /* JobDetail.swift in Sources */,
+				05902399206A397600D092FA /* GeneralInfor.swift in Sources */,
 				05CB387D206951B700F36E45 /* MajorController.swift in Sources */,
 				2FF5784320695BB5005FD3E2 /* JobCell.swift in Sources */,
 				2FF5781420692915005FD3E2 /* HomeController.swift in Sources */,
