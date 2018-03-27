@@ -16,6 +16,7 @@
 		2FF5781F20692915005FD3E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FF5781D20692915005FD3E2 /* LaunchScreen.storyboard */; };
 		2FF5782A20692915005FD3E2 /* DSSProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF5782920692915005FD3E2 /* DSSProjectTests.swift */; };
 		2FF5783520692915005FD3E2 /* DSSProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF5783420692915005FD3E2 /* DSSProjectUITests.swift */; };
+		2FF5784320695BB5005FD3E2 /* JobCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF5784220695BB5005FD3E2 /* JobCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		2FF5783020692915005FD3E2 /* DSSProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DSSProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FF5783420692915005FD3E2 /* DSSProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSSProjectUITests.swift; sourceTree = "<group>"; };
 		2FF5783620692915005FD3E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2FF5784220695BB5005FD3E2 /* JobCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				2FF5781820692915005FD3E2 /* DSSProject.xcdatamodeld */,
 				05CB387A20694BA600F36E45 /* MajorCell.swift */,
 				05CB387C206951B700F36E45 /* MajorController.swift */,
+				2FF5784220695BB5005FD3E2 /* JobCell.swift */,
 			);
 			path = DSSProject;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				05CB387D206951B700F36E45 /* MajorController.swift in Sources */,
+				2FF5784320695BB5005FD3E2 /* JobCell.swift in Sources */,
 				2FF5781420692915005FD3E2 /* HomeController.swift in Sources */,
 				2FF5781A20692915005FD3E2 /* DSSProject.xcdatamodeld in Sources */,
 				2FF5781220692915005FD3E2 /* AppDelegate.swift in Sources */,
