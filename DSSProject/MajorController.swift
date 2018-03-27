@@ -12,12 +12,13 @@ class MajorController: UIViewController, UICollectionViewDelegate, UICollectionV
     
    override func viewDidLoad() {
         super.viewDidLoad()
-//        super.setupNavBar()
-        view.backgroundColor = .red
+        setupNavBar()
+        view.backgroundColor = .white
         collectionView2.delegate = self
         collectionView2.dataSource = self
     
-        collectionView2.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId2)
+        collectionView2.register(JobCell.self, forCellWithReuseIdentifier: cellId2)
+        setupTopView()
         setupMajor()
     }
     
@@ -25,19 +26,27 @@ class MajorController: UIViewController, UICollectionViewDelegate, UICollectionV
     
     let topView2: UIView = {
         let topView = UIView()
-        topView.backgroundColor = .white
+        topView.backgroundColor = UIColor.yellow
         topView.translatesAutoresizingMaskIntoConstraints = false
         return topView
     }()
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId2, for: indexPath)
-        cell.backgroundColor = .red
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId2, for: indexPath) as! JobCell
+        cell.backgroundColor = .white
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: view.frame.width, height: 100)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 10
     }
     
     
@@ -45,9 +54,44 @@ class MajorController: UIViewController, UICollectionViewDelegate, UICollectionV
         let layout = UICollectionViewFlowLayout()
         let collectionView2 = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView2.translatesAutoresizingMaskIntoConstraints = false
-        collectionView2.backgroundColor = .blue
+        collectionView2.backgroundColor = UIColor.darkGray
         return collectionView2
     }()
+    
+    func setupNavBar(){
+        let lable = UILabel()
+        lable.text = "CareerBuilder"
+        lable.textColor = UIColor.white
+        lable.font = UIFont.boldSystemFont(ofSize: 25)
+        lable.backgroundColor = UIColor.clear
+        self.navigationItem.titleView = lable
+    }
+    
+    //SETUP TOPVIEW
+    let label: UILabel = {
+        let lbl = UILabel()
+        lbl.text = "CNTT - Phần mềm"
+        lbl.font = UIFont.boldSystemFont(ofSize: 20)
+        lbl.translatesAutoresizingMaskIntoConstraints = false
+        return lbl
+    }()
+    
+    let line: UIView = {
+        let line = UIView()
+        line.backgroundColor = UIColor.darkGray
+        line.translatesAutoresizingMaskIntoConstraints = false
+        return line
+    }()
+    
+    func setupTopView() {
+        topView2.addSubview(label)
+        topView2.addSubview(line)
+        
+        topView2.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-16-[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": label]))
+        topView2.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": line]))
+        
+        topView2.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-2-[v0][v1(1)]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": label, "v1":line]))
+    }
     
     func setupMajor(){
         self.view.addSubview(topView2)

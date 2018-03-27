@@ -66,7 +66,7 @@ class HomeController: UIViewController, UICollectionViewDelegate, UICollectionVi
     // initial topView
     let topView: UIView = {
        let topView = UIView()
-        topView.backgroundColor = .white
+        topView.backgroundColor = UIColor.yellow
         
         topView.translatesAutoresizingMaskIntoConstraints = false
         return topView
@@ -83,7 +83,7 @@ class HomeController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     let line: UIView = {
         let line = UIView()
-        line.backgroundColor = .red
+        line.backgroundColor = UIColor.darkGray
         line.translatesAutoresizingMaskIntoConstraints = false
         
         return line
@@ -95,7 +95,7 @@ class HomeController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         topView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": lbl]))
         topView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": line]))
-        topView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-2-[v0][v1(2)]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": lbl, "v1": line]))
+        topView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-2-[v0][v1(1)]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": lbl, "v1": line]))
     }
     
     let collectionView: UICollectionView = {
