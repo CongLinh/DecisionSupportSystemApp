@@ -49,6 +49,10 @@ class MajorController: UIViewController, UICollectionViewDelegate, UICollectionV
         return 10
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        navigationController?.pushViewController(JobDetail(), animated: true)
+    }
+    
     
     let collectionView2: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -106,7 +110,5 @@ class MajorController: UIViewController, UICollectionViewDelegate, UICollectionV
         collectionView2.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
         collectionView2.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = true
         collectionView2.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
-        
-        
     }
 }
