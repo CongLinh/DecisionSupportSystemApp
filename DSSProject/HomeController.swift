@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class HomeController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     let major: [String] = ["CNTT - Phần mềm", "CNTT - Truyền thông mạng", "CNTT - An toàn và bảo mật thông tin", "Sư phạm", "Kinh tế"]
@@ -42,13 +43,14 @@ class HomeController: UIViewController, UICollectionViewDelegate, UICollectionVi
         return major.count
     }
     
+    //var majorCell: String = ""
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! MajorCell
         
-        cell.lbl.text = major[indexPath.row]
-    
+        cell.lbl.text = major[indexPath.item]
         return cell
     }
+    
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: view.frame.width, height: 60)
@@ -59,10 +61,22 @@ class HomeController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     // move to another screen when click on per row
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        navigationController?.pushViewController(MajorController(), animated: true)
-    }
+    //func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    //    navigationController?.pushViewController(MajorController(), animated: true)
+    //}
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let major1 = major[indexPath.item]
+        print(major1)
+        navigationController?.pushViewController(MajorController(), animated: true)
+        
+        let majorLabel = MajorController()
+        majorLabel.label.text = major1
+        
+        //navigationController?.navigationItem.title = major1
+        
+    }
+
     // initial topView
     let topView: UIView = {
        let topView = UIView()
